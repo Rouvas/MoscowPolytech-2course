@@ -1,0 +1,13 @@
+#DrJava configuration file
+#Mon Sep 16 02:10:38 MSK 2019
+key.delete.next = [shift DELETE]
+key.delete.previous = [shift BACK_SPACE]
+recent.files = [D:\\UserFiles\\Massiv.java]
+window.height = 1047
+window.width = 974
+window.x = 953
+window.y = 0
+last.dir = D:\\UserFiles\\Massiv.java
+last.interactions.dir = D:\\UserFiles
+tabbedpanes.state = 960 540 700 400
+new.version.notification.last = 1568584060948
