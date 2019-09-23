@@ -16,7 +16,7 @@ class lab1
       c[i]=(int)(10*Math.random());
       System.out.print(c[i]+" ");
     }
-    System.out.println("Массив заполнен");
+    System.out.println("Massiv zapolnen");
    }
   
   public static void print_arr(int[] t)
