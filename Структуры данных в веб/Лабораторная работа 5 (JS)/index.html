@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+<textarea id="inf" style="width: 100%; height: 400px"></textarea>
+<script>
+
+
+function mergeSort (Arr, Step)
+{
+if (!Step)
+   {
+   // первый шаг: создание упорядоченных массивов по два элемента
+   document.getElementById ('inf').value += Arr.join ('\t') + '\n'; //***DEMO***
+   for (var newArr = new Array (), j = 0, lj = Arr.length; j < lj; j += 2)
+      if (j + 1 == lj) newArr [newArr.length] = [Arr [j]];
+      else newArr [newArr.length] = (Arr [j] > Arr [j + 1]) ? [Arr [j + 1], Arr [j]] : [Arr [j], Arr [j + 1]];
+   document.getElementById ('inf').value += newArr.join ('\t\t') + '\n'; //***DEMO***
+   mergeSort (newArr, newArr.length);
+   }
+ 
+else
+   {
+   // последующие шаги, в которых соседние массивы упорядоченно сливаются
+   // вплоть до получения одного искомого упорядоченного массива
+   for (var newArr = new Array (), l = j = 0, lj = Arr.length; j < lj; j += 2)
+      {
+      newArr [l] = new Array (); if (j + 1 == lj) newArr [l] = Arr [j];
+      else
+         {
+         while (Arr [j].length && Arr [j + 1].length)
+            if (Arr [j] [0] < Arr [j + 1] [0]) newArr [l].push (Arr [j].shift ());
+            else newArr [l].push (Arr [j + 1].shift ());
+         if (!Arr [j].length && Arr [j + 1].length)
+            {newArr [l] = newArr [l].concat (Arr [j + 1]); Arr [j + 1] = new Array ()}
+         else if (!Arr [j + 1].length && Arr [j].length)
+            {newArr [l] = newArr [l].concat (Arr [j]); Arr [j] = new Array ()}
+         l++;
+         }
+      }
+   document.getElementById ('inf').value += newArr.join ('\t\t') + '\n'; //***DEMO***
+   if (newArr.length == 1) {rezult = newArr [0]; return}
+   else mergeSort (newArr, newArr.length);
+   }
+}
+ 
+var arr0 = [9, 5, 8, 3, 1, 2, 4, 6, 7, 0, 6, 7, 0, 0, 3, 2, 1, 9, 4];
+var rezult; 
+mergeSort (arr0); 
+alert (rezult);
+
+
+</script>
+</body>
+</html>
