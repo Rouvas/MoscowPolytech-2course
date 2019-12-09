@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row mt-3">
+  <h5>Лабораторная работа №11</h5> 
+  </div>
+  <div class="row mt-2">
+      <h6>К сожалению, файл с заданием потерялся (его нет на гугл диске), но получилась вот такая штука.</h6>
+      </div>
+    <div class="row mt-3">
+        <form class="input-group">
+          <input
+            (change)="onChange($event)"
+            [(ngModel)]="inputVal"
+            type="text"
+            name="sensorName"
+            class="form-control"
+            placeholder="Имя датчика"
+            aria-label="Имя датчика"
+            aria-describedby="button-addon2"
+                                           /> 
+                                           
+          <div class="input-group-append">
+            <button class="btn btn-success" (click)="addSensor()" type="button" id="button-addon2">
+              Добавить
+            </button>
+          </div>
+        </form>
+      </div>
+
+  <div class="row mt-3">
+    <div *ngFor="let sensor of sensors" class="col-4">
+      <div
+        class="card mt-2"
+        [ngClass]="{ 'red-bg': sensor.status === 'offline', 'green-bg': sensor.status === 'online' }"
+      >
+        <div class="card-body">
+          <h5 class="card-title">{{ sensor.id + 1 }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ sensor.name }}</h6>
+          <button class="btn btn-danger" (click)="deleteSensor(sensor.id)" type="button" id="button-del">
+              Удалить
+            </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</div>

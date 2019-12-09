@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <input type="text" class="form-control" placeholder="Имя" #inputFirstname>
+        </div>
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" placeholder="Фамилия" #inputLastname>
+        </div>
+        <div class="col-12 mt-2">
+            <button class="btn btn-success"
+                (click)="onAddPerson(inputFirstname.value, inputLastname.value)">
+                Сохранить</button>
+        </div>
+    </div>
+</div>

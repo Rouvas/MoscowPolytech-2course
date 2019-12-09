@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <h2>{{title}}</h2>
+  </div>
+</div>
+
+<input type="text" [(ngModel)] = "searchStr">
+
+<app-person-view [inPerson]="person" *ngFor="let person of persons | MyFilterPipe:searchStr" (deleteperson)="onDeletePerson($event)"   (editperson)="onEditPerson($event)"  >
+</app-person-view>
+
+<hr>
+<app-person-add (addperson)="onAddPerson($event)"></app-person-add>
