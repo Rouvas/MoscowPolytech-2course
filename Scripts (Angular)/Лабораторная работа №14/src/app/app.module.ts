@@ -12,7 +12,7 @@ import { PersonAddComponent } from './person-add/person-add.component';
 import { PersonDelComponent } from './person-del/person-del.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { MyFilterPipe } from './shared/pipes/pipes.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +31,7 @@ import { MyFilterPipe } from './shared/pipes/pipes.component';
     ReactiveFormsModule,
     FormsModule,
     TextMaskModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
