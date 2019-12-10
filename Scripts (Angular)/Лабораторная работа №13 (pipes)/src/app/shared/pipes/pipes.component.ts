@@ -7,12 +7,11 @@ import { Person } from '../models/person.model';
 })
 export class MyFilterPipe implements PipeTransform {
 
-  transform(persons: Person[], searchStr: string) {
+  transform(persons: Person[], searchStr: string, searchLastname:string) {
 
-    if (!isNullOrUndefined(persons) && searchStr.trim().length > 0) {
+    if (!isNullOrUndefined(persons) && (searchStr.trim().length > 0 || searchLastname.trim().length > 0)) {
       // let newArr = months.filter(month => month.toLocaleLowerCase() === searchStr.toLocaleLowerCase());
-      let newArr = persons.filter(persons => 
-        persons.firstname.toLocaleLowerCase().indexOf(searchStr.toLocaleLowerCase()) === 0);
+      let newArr = persons.filter(persons => persons.firstname.toLocaleLowerCase().indexOf(searchStr.toLocaleLowerCase()) === 0);
       return newArr;
     } else {
       return persons;

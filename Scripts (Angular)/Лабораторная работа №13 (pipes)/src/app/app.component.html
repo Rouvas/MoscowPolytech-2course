@@ -2,11 +2,30 @@
   <div class="row">
     <h2>{{title}}</h2>
   </div>
+
+
+  <div class="row">
+    <h6>Поиск по имени и фамилии</h6>
+  </div>
+
+<div class="row mt-2">
+  <div class="col-12">
+      <input type="text" class="form-control" placeholder="Имя" [(ngModel)] = "searchStr">
+  </div>  
+</div>
+<div class="row mt-2">
+  <div class="col-12">
+      <input type="text" class="form-control" placeholder="Фамилия" [(ngModel)] = "searchLastname">
+  </div>  
 </div>
 
-<input type="text" [(ngModel)] = "searchStr">
+</div>
 
-<app-person-view [inPerson]="person" *ngFor="let person of persons | MyFilterPipe:searchStr" (deleteperson)="onDeletePerson($event)"   (editperson)="onEditPerson($event)"  >
+
+<hr>
+
+
+<app-person-view [inPerson]="person" *ngFor="let person of persons | MyFilterPipe:searchStr | MyFilterPipe: searchLastname" (deleteperson)="onDeletePerson($event)"   (editperson)="onEditPerson($event)"  >
 </app-person-view>
 
 <hr>
