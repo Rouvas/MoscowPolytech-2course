@@ -10,7 +10,7 @@
 
 <div class="row mt-2">
   <div class="col-12">
-      <input type="text" class="form-control" placeholder="Имя" [(ngModel)] = "searchStr">
+      <input type="text" class="form-control" placeholder="Имя" [(ngModel)] = "searchFirstname">
   </div>  
 </div>
 <div class="row mt-2">
@@ -25,7 +25,7 @@
 <hr>
 
 
-<app-person-view [inPerson]="person" *ngFor="let person of persons | MyFilterPipe:searchStr | MyFilterPipe: searchLastname" (deleteperson)="onDeletePerson($event)"   (editperson)="onEditPerson($event)"  >
+<app-person-view [inPerson]="person" *ngFor="let person of persons | MyFilterPipe:searchFirstname| MyFilterPipe: searchLastname" (deleteperson)="onDeletePerson($event)"   (editperson)="onEditPerson($event)"  >
 </app-person-view>
 
 <hr>

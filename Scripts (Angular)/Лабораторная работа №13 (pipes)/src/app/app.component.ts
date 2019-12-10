@@ -11,7 +11,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   title = 'Компоненты';
   persons: Person[] = [];
-  searchStr = '';
+  searchFirstname = '';
   searchLastname = '';
  
   constructor() {
@@ -19,11 +19,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
 
   ngOnInit(): void {
-    this.persons.push(new Person('Ivan', 'Ivanov', '+7 (555) 093-40-42', 1));
-    this.persons.push(new Person('Ivan', 'Ivanov', '+7 (555) 093-40-42', 2));
-    this.persons.push(new Person('Ivan', 'Ivanov', '+7 (555) 093-40-42', 3));
-    this.persons.push(new Person('Ivan', 'Ivanov', '+7 (555) 093-40-42', 4));
-    this.persons.push(new Person('Ivan', 'Ivanov', '+7 (555) 093-40-42', 5));
+    this.persons.push(new Person('Savage', 'Goodbye', '+7 (555) 093-40-42', 1));
+    this.persons.push(new Person('Sakis', 'Rouvas', '+7 (555) 093-40-42', 2));
+    this.persons.push(new Person('Dimitra', 'Papadea', '+7 (555) 093-40-42', 3));
+    this.persons.push(new Person('C.C.', 'Catch', '+7 (555) 093-40-42', 4));
+    this.persons.push(new Person('Patty', 'Ryan', '+7 (555) 093-40-42', 5));
   }
 
   ngOnDestroy(): void {
