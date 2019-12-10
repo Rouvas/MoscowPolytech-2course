@@ -12,7 +12,7 @@ export class AppComponent implements OnInit, OnDestroy {
   title = 'Компоненты';
   persons: Person[] = [];
   searchGuy = '';
- 
+  searchSurname = '';
   constructor() {
   }
 
