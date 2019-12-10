@@ -11,8 +11,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   title = 'Компоненты';
   persons: Person[] = [];
-  searchFirstname = '';
-  searchLastname = '';
+  searchGuy = '';
  
   constructor() {
   }
