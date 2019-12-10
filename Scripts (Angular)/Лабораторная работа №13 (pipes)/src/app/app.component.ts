@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Person } from './shared/models/person.model';
-import { MyFilterPipe } from './shared/pipes/pipes.component';
 
 @Component({
   selector: 'app-root',
