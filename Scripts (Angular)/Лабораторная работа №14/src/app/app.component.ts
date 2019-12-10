@@ -8,7 +8,6 @@ import { Person } from './shared/models/person.model';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-
   title = 'Компоненты';
   persons: Person[] = [];
   searchGuy = '';
@@ -27,6 +26,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
   }
+
 
   onAddPerson(person: Person) {
     let newId;

@@ -15,7 +15,6 @@ import { MyFilterPipe } from './shared/pipes/pipes.component';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +30,7 @@ import { MyFilterPipe } from './shared/pipes/pipes.component';
     ModalModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
-    TextMaskModule
+    TextMaskModule,
 
   ],
   providers: [],
