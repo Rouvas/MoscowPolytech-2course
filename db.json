@@ -1,8 +1,8 @@
 {
   "posts": [
-    { "id": 1, "firstname": "Ivan", "lastname": "Ivanov", "phone" : "+7 (555) 555-55-55" },
-    { "id": 2, "firstname": "Ivan", "lastname": "Ivanov", "phone" : "+7 (555) 555-55-55" },
-    { "id": 3, "firstname": "Ivan", "lastname": "Ivanov", "phone" : "+7 (555) 555-55-55" },
-    { "id": 4, "firstname": "Ivan", "lastname": "Ivanov", "phone" : "+7 (555) 555-55-55" }
+    { "id": 1, "firstname": "Aleksandros", "lastname": "Rouvas", "phone" : "+7 (555) 555-55-55" },
+    { "id": 2, "firstname": "Dimitra", "lastname": "Papadea", "phone" : "+7 (555) 555-55-55" },
+    { "id": 3, "firstname": "Sakis", "lastname": "Rouvas", "phone" : "+7 (555) 555-55-55" },
+    { "id": 4, "firstname": "Poweredby", "lastname": "Json", "phone" : "+7 (555) 555-55-55" }
   ]
 }
