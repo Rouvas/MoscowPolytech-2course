@@ -1,0 +1,5 @@
+<div class="container">
+  <p *ngFor="let good of goods">
+    <a [routerLink]="['/edit', good.id]">{{good.name}}</a>
+  </p>
+</div>
