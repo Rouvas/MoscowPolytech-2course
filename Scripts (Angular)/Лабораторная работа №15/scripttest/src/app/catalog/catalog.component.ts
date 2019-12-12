@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ItemsService } from '../services/items.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { Person } from '../shared/models/person.model';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap';
+import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+
 
 @Component({
   selector: 'app-catalog',
@@ -11,11 +14,23 @@ export class CatalogComponent implements OnInit {
   goods = [];
 
   constructor(
-    private itemsService: ItemsService
+    
   ) { }
+  @Input() inPerson: Person;
+  personForms: FormGroup;
+  disabledForms = false;
+  mask = ['+','7',' ','(',/[1-9]/, /\d/, /\d/,')' ,' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-',/\d/, /\d/];
+
 
   ngOnInit() {
-    this.goods = this.itemsService.goods;
+    this.personForms = new FormGroup({
+      firstName: new FormControl({ value: this.inPerson.firstname, disabled: this.disabledForms },
+        [Validators.required]),
+      lastName: new FormControl({ value: this.inPerson.lastname, disabled: this.disabledForms },
+        [Validators.required]),
+      phone: new FormControl({ value: this.inPerson.phone, disabled: this.disabledForms },
+        [Validators.required])
+    });
   }
 
 }

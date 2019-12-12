@@ -32,7 +32,7 @@ export class PersonViewComponent implements OnInit {
       phone: new FormControl({ value: this.inPerson.phone, disabled: this.disabledForms },
         [Validators.required])
     });
-    console.log(this.personForms);
+    console.log(this.personForms.value);
   }
 
   onDeletePerson(person){

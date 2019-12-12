@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "firstname": "Dimitra",
+      "lastname": "Papadea",
+      "phone": "+7 (555) 555-55-55"
+    },
+    {
+      "id": 3,
+      "firstname": "Sakis",
+      "lastname": "Rouvas",
+      "phone": "+7 (555) 555-55-55"
+    },
+    {
+      "id": 4,
+      "firstname": "Poweredby",
+      "lastname": "Json",
+      "phone": "+7 (555) 555-55-55"
+    }
+  ]
+}

@@ -31,4 +31,7 @@ export class PostsService extends BaseApi {
 		return this.delete('posts/' + id, this.options).toPromise();
 	}
 
+
+
+
 }

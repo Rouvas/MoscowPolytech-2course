@@ -8,17 +8,13 @@
     <h6>Поиск по имени и фамилии</h6>
   </div>
 
-<div class="row mt-2">
-  <div class="col-12">
-      <input type="text" class="form-control" placeholder="Имя" [(ngModel)] = "searchGuy">
-  </div>  
-</div>
 
 <div class="row mt-2">
   <div class="col-12">
-      <input type="text" class="form-control" placeholder="Фамилия" [(ngModel)] = "searchSurname">
+      <input type="text" class="form-control" placeholder="Имя фамилия" [(ngModel)] = "searchGuy">
   </div>  
 </div>
+
 
 
 </div>
@@ -27,7 +23,7 @@
 <hr>
 
 
-<app-person-view [inPerson]="person" *ngFor="let person of persons | MyFilterPipe:searchGuy:searchSurname" (deleteperson)="onDeletePerson($event)"   (editperson)="onEditPerson($event)"  >
+<app-person-view [inPerson]="person" *ngFor="let person of persons | MyFilterPipe:searchGuy" (deleteperson)="onDeletePerson($event)"   (editperson)="onEditPerson($event)"  >
 </app-person-view>
 
 <hr>

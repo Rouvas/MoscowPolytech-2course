@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable()
 export class BaseApi {
 
-	private baseUrl = 'https://my-json-server.typicode.com/rouvas/moscowpolytech/';
+	private baseUrl = 'http://localhost:3000/';
 
 	constructor(public http: HttpClient) { }
 
