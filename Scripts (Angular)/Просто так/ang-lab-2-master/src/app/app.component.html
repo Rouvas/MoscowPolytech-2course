@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  <div class="nav nav-tabs mb-2">
+    <div class="nav-item">
+      <a class="nav-link"
+         [routerLink]="'/'"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact: true}"
+      >Список</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link"
+         routerLinkActive="active"
+         [routerLink]="'/add'"
+      >Добавить</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

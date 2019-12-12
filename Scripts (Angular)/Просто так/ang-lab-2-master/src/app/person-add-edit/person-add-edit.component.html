@@ -1,0 +1,24 @@
+<h3>{{(!id) ? 'Добавление' : 'Редактирование'}}</h3>
+
+<form [formGroup]="personForm" (ngSubmit)="((!id) ? onAddPerson() : onEditPerson(id))">
+  <div class="row">
+    <div class="col-12">
+      <input type="text" class="form-control" formControlName="firstName" placeholder="Имя">
+    </div>
+    <div class="col-12 mt-2">
+      <input type="text" class="form-control" formControlName="lastName" placeholder="Фамилия">
+    </div>
+    <div class="col-12 mt-2">
+      <input type="text" class="form-control" formControlName="tel" placeholder="Телефон"
+              prefix="+7" mask=" (000) 000-00-00" [dropSpecialCharacters]="false" [showMaskTyped]="true" [validation]="true"
+      >
+    </div>
+    <div class="col-12 mt-2">
+      <button class="btn btn-primary"
+              [disabled]="personForm.invalid"
+      >
+        {{(!id) ? 'Добавить' : 'Сохранить'}}
+      </button>
+    </div>
+  </div>
+</form>
