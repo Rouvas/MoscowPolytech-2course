@@ -11,7 +11,7 @@ import {ActivatedRoute} from '@angular/router';
 
 export class PersonAddEditComponent implements OnInit {
   id: number;
-
+  
   constructor(
     private srv: SrvService,
     private activatedRouter: ActivatedRoute,
@@ -24,9 +24,9 @@ export class PersonAddEditComponent implements OnInit {
   personForm: FormGroup;
   disabledControl: boolean;
 
-
+  
   ngOnInit(): void {
-
+    
     this.personForm = new FormGroup({
       firstName: new FormControl({value: '', disabled: this.disabledControl}, [Validators.required]),
       lastName: new FormControl({value: '', disabled: this.disabledControl}, [Validators.required]),
@@ -45,27 +45,36 @@ export class PersonAddEditComponent implements OnInit {
       });
     }
   }
-
+  
   onAddPerson() {
+
+    
+    
     const person = this.personForm.value;
-    person.tel = `+7 ${person.tel}`;
+    let noperson = person.tel;
+    person.tel = `+7 ${noperson}`;
+    let question = confirm("Подтвердите введенную информацию \n" + 'Имя: '+person.firstName + '\n' + 'Фамилия: '+person.lastName + '\n'+ 'Телефон: '+person.tel + '\n');
+    if (question == true) {
     this.srv.addPerson(person).then(() => {
       this.personForm.reset();
-      alert('Информация успешно добавлена');
+      document.location.href = "/";
     });
+  } else person.tel = noperson;
   }
 
 
   
   onEditPerson(id: number) {
     let person = this.personForm.value;
-
     person.id = id;
     person.tel = (person.tel.toString().indexOf('+7') === -1) ? `+7 ${person.tel}` : person.tel;
+    let question = confirm("Подтвердите введенную информацию \n" + 'Имя: '+person.firstName + '\n' + 'Фамилия: '+person.lastName + '\n'+ 'Телефон: '+person.tel + '\n');
 
+
+    if (question == true) {
     this.srv.editPerson(person).then(() => {
-      alert('Изменения успешно сохранены');
-    });
+      document.location.href = "/";
+    });  } 
   }
 
   isNaN(id: number) {

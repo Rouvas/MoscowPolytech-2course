@@ -1,19 +1,29 @@
 <div class="container">
-  <h1>{{title}}</h1>
+  <br>
+  <h4>{{title}}</h4>
+
+  
+
+
   <div class="nav nav-tabs mb-2">
     <div class="nav-item">
       <a class="nav-link"
          [routerLink]="'/'"
          routerLinkActive="active"
          [routerLinkActiveOptions]="{exact: true}"
-      >Список</a>
+      >Home  <img src="https://cultofthepartyparrot.com/parrots/slomoparrot.gif" alt="Slo-mo Parrot">   </a>
     </div>
     <div class="nav-item">
       <a class="nav-link"
          routerLinkActive="active"
          [routerLink]="'/add'"
-      >Добавить</a>
+      >Add  <img src="https://cultofthepartyparrot.com/parrots/slomoparrot.gif" alt="Slo-mo Parrot">   </a>
     </div>
   </div>
+</div>
+
+<div class="container">
   <router-outlet></router-outlet>
 </div>
+
+

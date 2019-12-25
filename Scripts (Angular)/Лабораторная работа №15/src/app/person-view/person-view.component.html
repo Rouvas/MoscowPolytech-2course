@@ -17,19 +17,19 @@
       </div>
     </div>
   </div>
-<div class="col-4">
+<div class="col-2">
   <div class="row">
     <div class="col-6">
-      <button class="btn btn-primary"
+      <button class="btn btn-warning"
               [routerLink]="['/edit', person.id]"
-      >Редактировать
+      >  &#9881;
       </button>
     </div>
     <div class="col-6">
-      <button class="btn btn-warning"
+      <button class="btn btn-danger"
               (click)="onRemovePerson(person.id)"
       >
-        Удалить
+      ❎
       </button>
     </div>
   </div>

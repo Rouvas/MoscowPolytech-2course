@@ -1,4 +1,4 @@
-<h3>{{(!id) ? 'Добавление' : 'Редактирование'}}</h3>
+<h5>{{(!id) ? 'Добавление нового (попуга)' : 'Редактирование'}}</h5>
 <form [formGroup]="personForm" (ngSubmit)="(isNaN(id) ? onAddPerson() : onEditPerson(id))">
   <div class="row">
     <div class="col-12">
@@ -13,7 +13,7 @@
       >
     </div>
     <div class="col-12 mt-2">
-      <button class="btn btn-primary"
+      <button class="btn btn-success"
               [disabled]="personForm.invalid"
       >
         {{isNaN(id) ? 'Добавить' : 'Сохранить'}}
