@@ -1,8 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Person} from '../models/person.model';
 import {HttpClient} from '@angular/common/http';
-import {PostsService} from '../services/posts.service';
-import {BaseApi} from '../services/base-api';
+
 
 @Injectable({
   providedIn: 'root'
