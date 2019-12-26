@@ -18,6 +18,8 @@ export class PersonAddEditComponent implements OnInit {
   ) {
     this.activatedRouter.params.subscribe(param => {
       this.id = parseInt(param.id, 10);
+      console.log(param.id);
+      console.log(this.id);
     });
   }
 
@@ -47,9 +49,6 @@ export class PersonAddEditComponent implements OnInit {
   }
   
   onAddPerson() {
-
-    
-    
     const person = this.personForm.value;
     let noperson = person.tel;
     person.tel = `+7 ${noperson}`;
