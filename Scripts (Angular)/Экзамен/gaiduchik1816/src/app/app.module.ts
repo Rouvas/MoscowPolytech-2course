@@ -13,6 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { AddeditComponent } from './addedit/addedit.component';
 import {PhoneFilterPipe} from './services/pipes/phone-filter.pipe';
 import {PhoneFilterComponent} from './phone-filter/phone-filter.component';
+import {PhoneSortPipe} from './services/sorts/phone-sort.pipe';
+import {PhoneSortComponent} from './phone-sort/phone-sort.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {PhoneFilterComponent} from './phone-filter/phone-filter.component';
     FilterComponent,
     AddeditComponent,
     PhoneFilterPipe,
-    PhoneFilterComponent
+    PhoneFilterComponent,
+    PhoneSortPipe,
+    PhoneSortComponent
   ],
   imports: [
     BrowserModule,

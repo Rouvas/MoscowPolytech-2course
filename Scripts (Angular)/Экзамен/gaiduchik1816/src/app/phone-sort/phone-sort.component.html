@@ -1,11 +1,34 @@
 <hr>
-<h5>Фильтр</h5>
-<div class="row">
+<h5>Сортировка</h5>
+
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option1" autocomplete="off" (click)="onClick(1)"> ID (По возрастанию)
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option2" autocomplete="off" (click)="onClick(2)"> ID (По убыванию)
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option3" autocomplete="off" (click)="onClick(3)"> Цена (По возрастанию)
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option4" autocomplete="off" (click)="onClick(4)"> Цена (По убыванию)
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option5" autocomplete="off" (click)="onClick(5)"> Заказы (По возрастанию)
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option6" autocomplete="off" (click)="onClick(6)"> Заказы (По убыванию)
+  </label>
+</div>
+
+
+<!-- <div class="row">
   <div class="col-3">
     <input type="text" class="form-control" placeholder="Отфильтровать список по названию, артикулу или производителю"
            (input) = 'onFilterPhonesList()'
            [(ngModel)]="searching.firstName">
-  </div>
+  </div>  </div> -->
 
-</div>
+
 <hr>

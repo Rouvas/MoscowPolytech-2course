@@ -17,9 +17,7 @@ export class ShopComponent implements OnInit {
     firstName: ' '
   };
 
-  finding: object = {
-    firstName: ' '
-  };
+  finding: number;
 
   phones: Phone[] = [];
   modalRef: BsModalRef;
@@ -60,8 +58,12 @@ export class ShopComponent implements OnInit {
     });
   }
 
-  SortingPhonesList(e: object) {
+  FilterPhonesList(e: object) {
     this.searching = e;
+  }
+
+  SortPhonesList(e: number) {
+    this.finding = e;
   }
 
 

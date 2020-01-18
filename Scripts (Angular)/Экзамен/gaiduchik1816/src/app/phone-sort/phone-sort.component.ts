@@ -6,14 +6,18 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./phone-sort.component.css']
 })
 export class PhoneSortComponent {
-  @Output() SortPhonesList = new EventEmitter<object>();
+  @Output() SortPhonesList = new EventEmitter<number>();
 
-  finding = {
-    firstName: '',
-  };
 
-  onFilterPhonesList() {
-    console.log(this.finding);
-    this.SortPhonesList.emit(this.finding);
+
+
+  onClick(id:number) {
+    this.SortPhonesList.emit(id);
   }
+
+
+ // onSortPhonesList() {
+  //  console.log(this.finding);
+   // this.SortPhonesList.emit(this.finding);
+ // }
 }

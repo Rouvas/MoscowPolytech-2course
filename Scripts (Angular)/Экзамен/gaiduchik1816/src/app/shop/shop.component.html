@@ -5,10 +5,10 @@
 
 
 
-<hr>
-<h4>Сортировка</h4>
 
-
+<app-phone-sort
+  (SortPhonesList)='SortPhonesList($event)'
+></app-phone-sort>
 
 
 <hr>
@@ -34,7 +34,7 @@
                     </tr>
                 </thead>
                 <tbody>  
-                    <tr *ngFor="let phone of ((phones | phoneFilter : searching) )">
+                    <tr *ngFor="let phone of ((phones | phoneFilter : searching) | phoneSort : finding)">
                         <td>{{phone.id}}</td>
                         <td>{{phone.artic}}</td>
                         <td>{{phone.name}}</td>

@@ -9,7 +9,7 @@ import { isNullOrUndefined } from 'util';
 export class PhoneFilterPipe implements PipeTransform {
 
   transform(phones: Phone[], searching) : any  {
-    console.log(searching);
+    
     let searchGuy = searching.firstName;
 
     if (!isNullOrUndefined(phones) && searchGuy.trim().length > 0) {
