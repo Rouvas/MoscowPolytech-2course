@@ -21,8 +21,8 @@
                     <tr >
                         <th>ID</th>
                         <th>Артикул</th>
-                        <th>Название</th>
                         <th>Производитель</th>
+                        <th>Модель</th>
                         <th>Год выпуска</th>
                         <th>Разрешение экрана</th>
                         <th>Камера</th>
@@ -37,8 +37,8 @@
                     <tr *ngFor="let phone of ((phones | phoneFilter : searching) | phoneSort : finding)">
                         <td>{{phone.id}}</td>
                         <td>{{phone.artic}}</td>
-                        <td>{{phone.name}}</td>
                         <td>{{phone.manufacture}}</td>
+                        <td>{{phone.name}}</td>
                         <td>{{phone.date}} год</td>
                         <td>{{phone.size}}</td>
                         <td>{{phone.camera}} mpx</td>

@@ -1,14 +1,13 @@
 {
   "posts": [
     {
-      "artic": "3001",
+      "artic": "3002",
       "name": "Galaxy",
       "manufacture": "Samsung",
       "date": "2019",
       "size": "1920-1080",
       "camera": "12",
       "price": "14500",
-      "buy": 4,
       "id": 1
     },
     {
@@ -21,6 +20,17 @@
       "price": "30000",
       "buy": 1,
       "id": 2
+    },
+    {
+      "artic": "5001",
+      "name": "Y5",
+      "manufacture": "Huawei",
+      "date": "2018",
+      "size": "1280-720",
+      "camera": "12",
+      "price": "14000",
+      "buy": 1,
+      "id": 3
     }
   ]
 }
