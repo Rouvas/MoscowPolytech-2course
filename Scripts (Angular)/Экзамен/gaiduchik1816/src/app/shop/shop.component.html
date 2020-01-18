@@ -1,0 +1,64 @@
+
+<app-phone-filter
+  (FilterPhonesList)='FilterPhonesList($event)'
+></app-phone-filter>
+
+
+
+<hr>
+<h4>Сортировка</h4>
+
+
+
+
+<hr>
+<h4>Список устройств</h4>
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr >
+                        <th>ID</th>
+                        <th>Артикул</th>
+                        <th>Название</th>
+                        <th>Производитель</th>
+                        <th>Год выпуска</th>
+                        <th>Разрешение экрана</th>
+                        <th>Камера</th>
+                        <th>Цена</th>
+                        <th>Количество заказов</th>
+                        <th>Добавить заказ</th>
+                        <th>Изменить</th>
+                        <th>Удалить</th>
+                    </tr>
+                </thead>
+                <tbody>  
+                    <tr *ngFor="let phone of ((phones | phoneFilter : searching) )">
+                        <td>{{phone.id}}</td>
+                        <td>{{phone.artic}}</td>
+                        <td>{{phone.name}}</td>
+                        <td>{{phone.manufacture}}</td>
+                        <td>{{phone.date}} год</td>
+                        <td>{{phone.size}}</td>
+                        <td>{{phone.camera}} mpx</td>
+                        <td>{{phone.price}} руб.</td>
+                        <td>{{phone.buy}} шт.</td>
+                        <td> <button class="btn btn-success" (click)="onBuy(phone.id)">
+                                Buy
+                            </button></td>
+                        <td> <button class="btn btn-warning" [routerLink]="['/edit', phone.id]">
+                                Edit
+                            </button></td>
+                        <td> <button class="btn btn-danger" (click)="onRemovePhone(phone.id)">
+                                Del
+                            </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

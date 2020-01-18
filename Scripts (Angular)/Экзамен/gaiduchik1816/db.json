@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "artic": "3001",
+      "name": "Galaxy",
+      "manufacture": "Samsung",
+      "date": "2019",
+      "size": "1920-1080",
+      "camera": "12",
+      "price": "14500",
+      "buy": 4,
+      "id": 1
+    },
+    {
+      "artic": "4001",
+      "name": "Iphone",
+      "manufacture": "Apple",
+      "date": "2018",
+      "size": "1920-1080",
+      "camera": "10",
+      "price": "30000",
+      "buy": 1,
+      "id": 2
+    }
+  ]
+}

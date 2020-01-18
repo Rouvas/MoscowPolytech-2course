@@ -1,0 +1,41 @@
+<h5>{{(!id) ? 'Добавление нового устройства' : 'Редактирование'}}</h5>
+<form [formGroup]="phoneForm" (ngSubmit)="(isNaN(id) ? onAddPhone() : onEditPhone(id))">
+    <div class="row">
+        <h6>Артикул</h6> <br>
+        <div class="col-12">
+            <input type="text" class="form-control" formControlName="artic" placeholder="цифры">
+        </div> <br><br>
+        <h6>Название</h6> <br>
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" formControlName="name" placeholder="прим. Galaxy">
+        </div> <br><br>
+        <h6>Производитель</h6> <br>
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" formControlName="manufacture" placeholder="прим. Samsung">
+        </div> <br><br>
+        <h6>Дата производства</h6> <br>
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" formControlName="date" placeholder="прим. 2019">
+        </div> <br><br>
+        <h6>Разрешение экрана</h6> <br>
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" formControlName="size" placeholder="прим. 1920-1080">
+        </div> <br><br>
+        <h6>Разрешение камеры</h6> <br>
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" formControlName="camera" placeholder="прим. 8">
+        </div>  <br><br>
+        <h6>Цена</h6> <br>
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" formControlName="price" placeholder="прим. 19200">
+        </div> <br><br>
+     
+        <div class="col-12 mt-2">
+            <button class="btn btn-success" [disabled]="phoneForm.invalid">
+                {{isNaN(id) ? 'Добавить' : 'Сохранить'}}
+            </button>
+        </div>
+    </div>
+</form>
+
+

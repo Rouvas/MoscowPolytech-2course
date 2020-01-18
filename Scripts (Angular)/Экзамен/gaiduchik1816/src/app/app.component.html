@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="https://cultofthepartyparrot.com/parrots/slomoparrot.gif" width="30" height="30" alt="">
+  </a>
+  <a class="navbar-brand" href="#">Gaiduchik1816</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/'" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+          href="#">Главная страница</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/shop'" routerLinkActive="active" href="#">Магазин</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/add'" routerLinkActive="active" href="#">Добавить устройство</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container">
+  <br>
+  <router-outlet></router-outlet>
+</div>
