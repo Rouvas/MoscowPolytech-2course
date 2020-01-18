@@ -9,13 +9,39 @@ import {isNullOrUndefined} from 'util';
 export class PhoneSortPipe implements PipeTransform {
 
   transform(phones: Phone[], sortOptions : number) : any  {
-    
-  
+    console.log('Выбран алгоритм №' + sortOptions);
   if (sortOptions == 1) {
 
-   //console.log(phones[1-1].id);
-  
+    phones.sort((prev, next) => prev.id - next.id);
 
+  }
+
+  if (sortOptions == 2) {
+
+    phones.sort((prev, next) => next.id - prev.id);
+  
+  }
+
+  if (sortOptions == 3) {
+
+    phones.sort((prev, next) => prev.price - next.price);
+
+  }
+
+  if (sortOptions == 4) {
+
+    phones.sort((prev, next) => next.price - prev.price);
+  
+  }  if (sortOptions == 5) {
+
+    phones.sort((prev, next) => prev.buy - next.buy);
+
+  }
+
+  if (sortOptions == 6) {
+
+    phones.sort((prev, next) => next.buy - prev.buy);
+  
   }
 
 
