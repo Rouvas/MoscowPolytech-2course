@@ -9,6 +9,7 @@ import {HttpClient} from '@angular/common/http';
 export class SrvService {
   phones: Phone[] = [];
   phonesadd: Phone[] = [];
+  phonesedit: Phone[] = [];
   link = 'http://localhost:3001/posts/';
   options = {
     headers: {
@@ -57,6 +58,19 @@ export class SrvService {
   }
 
   async editPhone(phone: Phone) {
+    this.phonesedit = [];
+    const dataedit = await this.http
+    .get(this.link)
+    .toPromise();
+
+   for (const index in dataedit) {
+     delete dataedit[index].createdAt;
+     delete dataedit[index].updatedAt;
+     this.phonesedit.push(dataedit[index]);
+   }
+   
+   //phone.buy = this.phonesedit[phone.id].buy;
+
     let link = this.link + phone.id;
     return this.http.put(link, phone, this.options).toPromise();
   }

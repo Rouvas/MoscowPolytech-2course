@@ -34,6 +34,7 @@ export class AddeditComponent implements OnInit {
       size: new FormControl({value: '', disabled: this.disabledControl}, [Validators.required]),
       camera: new FormControl({value: '', disabled: this.disabledControl}, [Validators.required]),
       price: new FormControl({value: '', disabled: this.disabledControl}, [Validators.required]),
+      buy: new FormControl({value: '', disabled: this.disabledControl}, [Validators.required]),
     });
 
     if (this.id) {
@@ -68,7 +69,8 @@ export class AddeditComponent implements OnInit {
   onEditPhone(id: number) {
     let phone = this.phoneForm.value;
     phone.id = id;
-
+    phone.buy = Number(phone.buy);
+    
     let question = confirm("Подтвердите введенную информацию");
 
     if (question == true) {

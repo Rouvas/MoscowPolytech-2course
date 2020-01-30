@@ -2,24 +2,25 @@
   "posts": [
     {
       "artic": "3002",
-      "name": "Galaxy",
-      "manufacture": "Samsung",
-      "date": "2019",
+      "name": "Galaxy S8",
+      "manufacture": "Samsungqqq",
+      "date": "2018",
       "size": "1920-1080",
       "camera": "12",
       "price": "14500",
+      "buy": 129,
       "id": 1
     },
     {
       "artic": "4001",
-      "name": "Iphone",
+      "name": "Iphone 8",
       "manufacture": "Apple",
       "date": "2018",
       "size": "1920-1080",
       "camera": "10",
       "price": "30000",
-      "buy": 1,
-      "id": 2
+      "id": 2,
+      "buy": 2
     },
     {
       "artic": "5001",
@@ -29,8 +30,19 @@
       "size": "1280-720",
       "camera": "12",
       "price": "14000",
-      "buy": 1,
+      "buy": -1,
       "id": 3
+    },
+    {
+      "artic": "3004",
+      "name": "Boogie the one",
+      "manufacture": "Doogee",
+      "date": "2011",
+      "size": "1320-450",
+      "camera": "15",
+      "price": "7400",
+      "buy": 2,
+      "id": 4
     }
   ]
 }
