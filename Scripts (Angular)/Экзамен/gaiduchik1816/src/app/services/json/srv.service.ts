@@ -10,7 +10,7 @@ export class SrvService {
   phones: Phone[] = [];
   phonesadd: Phone[] = [];
   phonesedit: Phone[] = [];
-  link = 'http://localhost:3001/posts/';
+  link = 'http://localhost:3000/posts/';
   options = {
     headers: {
       'Content-Type': 'application/json'
