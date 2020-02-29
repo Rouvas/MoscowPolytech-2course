@@ -119,13 +119,8 @@
               "devServerTarget": "schedule:serve:production"
             }
           }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {}
         }
       }
-    }
-  },
+    }},
   "defaultProject": "schedule"
 }

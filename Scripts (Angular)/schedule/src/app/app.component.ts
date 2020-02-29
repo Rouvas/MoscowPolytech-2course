@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
-// import { NgxSmartModalService } from 'ngx-smart-modal';
-// import { BrowserModule } from '@angular/platform-browser';
-import { Observable } from 'rxjs';
-import { AngularFireDatabase } from '@angular/fire/database';
-
-
+import { NgxSmartModalService } from 'ngx-smart-modal';
+import { BrowserModule } from '@angular/platform-browser'
 
 
 @Component({
@@ -13,14 +9,6 @@ import { AngularFireDatabase } from '@angular/fire/database';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  items: Observable<any[]>;
-  constructor(db: AngularFireDatabase) {
-    
-    
- // document.cookie = "Save last position";
-    
-   // alert( document.cookie ); 
-  
-  }
-  
+  title = 'schedule';
+  constructor(public ngxSmartModalService: NgxSmartModalService) { }
 }
