@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 // import { NgxSmartModalService } from 'ngx-smart-modal';
 // import { BrowserModule } from '@angular/platform-browser';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import 'firebase/database';
-import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 
 
@@ -15,16 +13,14 @@ import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  itemRef: AngularFireObject<any>;
-  item: Observable<any>;
+  items: Observable<any[]>;
   constructor(db: AngularFireDatabase) {
-    this.itemRef = db.object('school68schedule');
-    this.item = this.itemRef.valueChanges();
-   
-    console.log(this.item);
-    console.log(this.itemRef);
-
-
+    
+    
+ // document.cookie = "Save last position";
+    
+   // alert( document.cookie ); 
+  
   }
-
+  
 }
