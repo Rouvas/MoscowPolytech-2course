@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "school68schedule"
+  },
+  "targets": {
+    "school68schedule": {
+      "hosting": {
+        "schedule": [
+          "school68schedule"
+        ]
+      }
+    }
+  }
+}
