@@ -4,6 +4,8 @@ import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { AppComponent } from './app.component';
 import { ClassscheduleComponent } from './classschedule/classschedule.component';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -14,9 +16,11 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     NgxSmartModalModule.forRoot(),
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [AngularFireModule,AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

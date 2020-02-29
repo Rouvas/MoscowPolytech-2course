@@ -12,14 +12,7 @@ export class ClassscheduleComponent implements OnInit {
 
   ngOnInit() {
     
-    let rasp = {
-      1: 'Математика',
-      2: 'Русский язык',
-      3: 'Китайский язык',
-      4: 'Информатика'
-    }
 
-    console.log(rasp);
 
 
   }
