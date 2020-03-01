@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 <<<<<<< HEAD:Scripts (Angular)/schedule_old/src/environments/environment.ts
+<<<<<<< HEAD:Scripts (Angular)/schedule_old/src/environments/environment.ts
 <<<<<<< HEAD
 export const environment = {
   production: false
@@ -11,6 +12,10 @@ export const environment = {
 
 
 >>>>>>> parent of 38793e55... nn
+=======
+
+
+>>>>>>> parent of 38793e55... nn:Scripts (Angular)/schedule/src/environments/environment.ts
 =======
 
 

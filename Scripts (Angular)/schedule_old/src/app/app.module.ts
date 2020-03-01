@@ -21,7 +21,10 @@ import { environment } from '../environments/environment';
     NgxSmartModalModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase)
 <<<<<<< HEAD:Scripts (Angular)/schedule_old/src/app/app.module.ts
+<<<<<<< HEAD:Scripts (Angular)/schedule_old/src/app/app.module.ts
 >>>>>>> parent of 38793e55... nn
+=======
+>>>>>>> parent of 38793e55... nn:Scripts (Angular)/schedule/src/app/app.module.ts
 =======
 >>>>>>> parent of 38793e55... nn:Scripts (Angular)/schedule/src/app/app.module.ts
   ],
